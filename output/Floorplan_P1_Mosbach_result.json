@@ -1,0 +1,187 @@
+{
+  "wohnflaeche_sqm": 212.9,
+  "rooms": 9,
+  "bathrooms": 4,
+  "balcony": true,
+  "terrace": false,
+  "kitchen": "separate",
+  "storage_room": true,
+  "floor_level": "Floor 1-4",
+  "property_type": "house",
+  "special_features": [],
+  "notes": [
+    "Balconies and terraces counted at 25% per WoFlV",
+    "Loft areas counted at 50% due to unknown ceiling height",
+    "All interior rooms (hallway, bathroom, storage) counted at 100%",
+    "Shared staircases excluded at 0%",
+    "Room dimensions taken directly from floor plan labels",
+    "Naming discrepancy for Floor 1 'PRIMARY BEDROOM' and 'BEDROOM' between AI extraction and PDF text.",
+    "Minor width discrepancy for Floor 3 'BATHROOM' (AI: 1.98m, PDF: 1.89m).",
+    "Unusually large hallway on Floor 4 (18.7 m²).",
+    "A large 'PATIO' area (230 m² or ~312.2 m²) is mentioned in the PDF but is missing from the AI extraction and Wohnfläche calculation.",
+    "AI-extracted room areas (total 224.3 m²) are less than the PDF stated 'TOTAL GROSS INTERNAL AREA' (239 m²), suggesting potential missing internal areas or different measurement methodologies."
+  ],
+  "wohnflaeche_breakdown": [
+    {
+      "name": "PRIMARY BEDROOM",
+      "type": "living",
+      "area": 18.5,
+      "coefficient": 1.0,
+      "contribution": 18.5
+    },
+    {
+      "name": "BEDROOM",
+      "type": "living",
+      "area": 15.1,
+      "coefficient": 1.0,
+      "contribution": 15.1
+    },
+    {
+      "name": "HALLWAY",
+      "type": "hallway",
+      "area": 3.7,
+      "coefficient": 1.0,
+      "contribution": 3.7
+    },
+    {
+      "name": "HALLWAY",
+      "type": "hallway",
+      "area": 3.1,
+      "coefficient": 1.0,
+      "contribution": 3.1
+    },
+    {
+      "name": "LAUNDRY",
+      "type": "storage",
+      "area": 3.6,
+      "coefficient": 1.0,
+      "contribution": 3.6
+    },
+    {
+      "name": "BATHROOM",
+      "type": "bathroom",
+      "area": 3.8,
+      "coefficient": 1.0,
+      "contribution": 3.8
+    },
+    {
+      "name": "HALLWAY",
+      "type": "hallway",
+      "area": 6.7,
+      "coefficient": 1.0,
+      "contribution": 6.7
+    },
+    {
+      "name": "LIVING ROOM",
+      "type": "living",
+      "area": 18.3,
+      "coefficient": 1.0,
+      "contribution": 18.3
+    },
+    {
+      "name": "BEDROOM",
+      "type": "living",
+      "area": 15.3,
+      "coefficient": 1.0,
+      "contribution": 15.3
+    },
+    {
+      "name": "HALLWAY",
+      "type": "hallway",
+      "area": 3.1,
+      "coefficient": 1.0,
+      "contribution": 3.1
+    },
+    {
+      "name": "KITCHEN/DINING ROOM",
+      "type": "kitchen",
+      "area": 13.1,
+      "coefficient": 1.0,
+      "contribution": 13.1
+    },
+    {
+      "name": "BATHROOM",
+      "type": "bathroom",
+      "area": 4.8,
+      "coefficient": 1.0,
+      "contribution": 4.8
+    },
+    {
+      "name": "ENTRY",
+      "type": "hallway",
+      "area": 5.9,
+      "coefficient": 1.0,
+      "contribution": 5.9
+    },
+    {
+      "name": "FAMILY ROOM",
+      "type": "living",
+      "area": 18.4,
+      "coefficient": 1.0,
+      "contribution": 18.4
+    },
+    {
+      "name": "BEDROOM",
+      "type": "living",
+      "area": 15.7,
+      "coefficient": 1.0,
+      "contribution": 15.7
+    },
+    {
+      "name": "HALLWAY",
+      "type": "hallway",
+      "area": 3.2,
+      "coefficient": 1.0,
+      "contribution": 3.2
+    },
+    {
+      "name": "KITCHEN/DINING ROOM",
+      "type": "kitchen",
+      "area": 13.1,
+      "coefficient": 1.0,
+      "contribution": 13.1
+    },
+    {
+      "name": "BATHROOM",
+      "type": "bathroom",
+      "area": 4.3,
+      "coefficient": 1.0,
+      "contribution": 4.3
+    },
+    {
+      "name": "LANDING",
+      "type": "hallway",
+      "area": 2.3,
+      "coefficient": 1.0,
+      "contribution": 2.3
+    },
+    {
+      "name": "BALCONY",
+      "type": "balcony",
+      "area": 10.1,
+      "coefficient": 0.25,
+      "contribution": 2.52
+    },
+    {
+      "name": "LOFT",
+      "type": "loft",
+      "area": 27.8,
+      "coefficient": 0.5,
+      "contribution": 13.9
+    },
+    {
+      "name": "HALLWAY",
+      "type": "hallway",
+      "area": 18.7,
+      "coefficient": 1.0,
+      "contribution": 18.7
+    },
+    {
+      "name": "BATHROOM",
+      "type": "bathroom",
+      "area": 5.8,
+      "coefficient": 1.0,
+      "contribution": 5.8
+    }
+  ]
+}

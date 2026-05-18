@@ -1,0 +1,46 @@
+{
+  "wohnflaeche_sqm": 44.95,
+  "rooms": 3,
+  "bathrooms": 1,
+  "balcony": false,
+  "terrace": false,
+  "kitchen": "open",
+  "storage_room": false,
+  "floor_level": "2.OG",
+  "property_type": "apartment",
+  "special_features": [],
+  "notes": [
+    "Balconies and terraces counted at 25% per WoFlV",
+    "Two rooms are missing from the extracted data, PDF indicates 6 rooms total."
+  ],
+  "wohnflaeche_breakdown": [
+    {
+      "name": "Wohnzimmer",
+      "type": "living",
+      "area": 18.24,
+      "coefficient": 1.0,
+      "contribution": 18.24
+    },
+    {
+      "name": "Schlafzimmer",
+      "type": "living",
+      "area": 11.59,
+      "coefficient": 1.0,
+      "contribution": 11.59
+    },
+    {
+      "name": "Flur",
+      "type": "hallway",
+      "area": 6.48,
+      "coefficient": 1.0,
+      "contribution": 6.48
+    },
+    {
+      "name": "Badezimmer",
+      "type": "bathroom",
+      "area": 8.21,
+      "coefficient": 1.0,
+      "contribution": 8.21
+    }
+  ]
+}
