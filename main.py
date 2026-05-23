@@ -10,6 +10,18 @@ from agents.evaluation_agent import evaluate
 
 
 def analyze(pdf_path):
+    """Run the full floor plan analysis pipeline on a single PDF.
+
+    Calls all five agents in sequence: extraction → vision → calculation
+    → reconciliation → evaluation.
+
+    Args:
+        pdf_path: Path to the PDF floor plan file.
+
+    Returns:
+        dict with the final property summary from the evaluation agent.
+    """
+
     print(f"\n{'='*50}")
     print(f"Analyzing: {pdf_path}")
     print(f"{'='*50}")
@@ -36,6 +48,16 @@ def analyze(pdf_path):
 
 
 def save_results(result, pdf_path):
+    """Save the analysis result as a JSON file and a Markdown report.
+
+    Output files are written to the output/ folder with the PDF stem
+    as the filename, e.g. output/Appartment_Transvaal_result.json.
+
+    Args:
+        result: final result dict from the analyze() function.
+        pdf_path: original PDF path, used to derive the output filename.
+    """
+
     os.makedirs("output", exist_ok=True)
     stem = Path(pdf_path).stem
 
@@ -51,6 +73,16 @@ def save_results(result, pdf_path):
 
 
 def generate_report(result, pdf_path):
+    """Generate a human-readable Markdown report from the analysis result.
+
+    Args:
+        result: final result dict from the analyze() function.
+        pdf_path: original PDF path, shown in the report header.
+
+    Returns:
+        A Markdown string ready to be written to a .md file.
+    """
+
     lines = []
     lines.append(f"# Floor Plan Analysis Report")
     lines.append(f"**File:** {pdf_path}\n")

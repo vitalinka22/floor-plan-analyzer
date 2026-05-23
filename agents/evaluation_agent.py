@@ -7,6 +7,23 @@ load_dotenv()
 client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
 def evaluate(vision_data, calculation_data, reconciliation_data):
+    """Produce the final property summary by resolving conflicts across all agents.
+
+    Sends all three data sources to Gemini and asks it to reconcile
+    disagreements, apply German conventions (e.g. room count excludes
+    bathrooms and hallways), and return a clean final JSON report.
+
+    Args:
+        vision_data: structured room data from the vision agent.
+        calculation_data: Wohnfläche totals from the calculation agent.
+        reconciliation_data: warnings and notes from the reconciliation agent.
+
+    Returns:
+        dict with keys: wohnflaeche_sqm, rooms, bathrooms, balcony, terrace,
+        kitchen, storage_room, floor_level, property_type, special_features,
+        notes, wohnflaeche_breakdown.
+    """
+    
     prompt = f"""
     You are a real estate analyst producing a final property report.
 

@@ -7,6 +7,20 @@ load_dotenv()
 client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
 def reconcile(vision_data, extraction_data):
+    """Cross-check vision AI output against raw PDF text to find inconsistencies.
+
+    Sends both data sources to Gemini and asks it to flag mismatches —
+    for example, a room area that appears in the vision output but not
+    in the PDF text, or conflicting room counts.
+
+    Args:
+        vision_data: structured room data returned by the vision agent.
+        extraction_data: raw word list returned by the extraction agent.
+
+    Returns:
+        dict with key "reconciliation_notes": list of warning/confirmation strings.
+    """
+    
     pdf_words = extraction_data.get("words", [])
     pdf_text_values = [w.get("text", "") for w in pdf_words]
 
