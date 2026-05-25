@@ -21,6 +21,9 @@ def pdf_to_images(pdf_path):
         img_bytes = pix.tobytes("png")
         img = Image.open(io.BytesIO(img_bytes))
         images.append(img)
+    
+    if not images:
+        raise ValueError(f"No pages found in PDF: {pdf_path}")
     return images
 
 if __name__ == "__main__":

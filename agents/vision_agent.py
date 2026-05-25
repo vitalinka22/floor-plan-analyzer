@@ -6,7 +6,10 @@ import json
 from utils.pdf_to_image import pdf_to_images
 
 load_dotenv()
-client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
+api_key = os.getenv("GEMINI_API_KEY")
+if not api_key:
+    raise EnvironmentError("GEMINI_API_KEY not found in environment variables. Please set it in your .env file.")
+client = genai.Client(api_key=api_key)
 
 def analyze_floor_plan(pdf_path):
     """Analyze a floor plan PDF and return a structured JSON representation of the layout and features"""

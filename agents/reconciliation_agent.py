@@ -4,7 +4,10 @@ import os
 import json
 
 load_dotenv()
-client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
+api_key = os.getenv("GEMINI_API_KEY")
+if not api_key:
+    raise EnvironmentError("GEMINI_API_KEY not found in environment variables. Please set it in your .env file.")
+client = genai.Client(api_key=api_key)
 
 def reconcile(vision_data, extraction_data):
     """Cross-check vision AI output against raw PDF text to find inconsistencies.

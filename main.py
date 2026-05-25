@@ -21,7 +21,12 @@ def analyze(pdf_path):
     Returns:
         dict with the final property summary from the evaluation agent.
     """
+    if not pdf_path.lower().endswith(".pdf"):
+        raise ValueError(f"Invalid file type, expected PDF: {pdf_path}")
 
+    if not os.path.exists(pdf_path):
+        raise FileNotFoundError(f"PDF file not found: {pdf_path}")
+    
     print(f"\n{'='*50}")
     print(f"Analyzing: {pdf_path}")
     print(f"{'='*50}")
